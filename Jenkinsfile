@@ -15,7 +15,7 @@ pipeline {
                 sh 'mvn test'
                 sh 'mvn package'
                 sh 'mvn compile'
-                sh 'java -cp target\classes com.cloudnautic.App'
+                sh 'java -cp target/classes com.cloudnautic.App'
             }
         }
 
