@@ -18,13 +18,14 @@ pipeline {
                 sh 'java -cp target/classes com.cloudnautic.App'
             }
         }
+    }
 
-        on failure {
+    post {
+        failure {
             echo 'Build failed. Please check the logs for details.'
         }
-        on success {
+        success {
             echo 'Build succeeded. All tests passed.'
         }
-        
     }
 }
